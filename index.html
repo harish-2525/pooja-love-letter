@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#120a14">
+<title>A Letter For Pooja 🤍</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&display=swap');
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:#0b0710;color:#fff;font-family:'Cormorant Garamond',serif;overflow-x:hidden}
+#sky{position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 50% 18%,#3a203c 0,#180d1d 42%,#07050a 100%)}
+#stars,.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:-1}
+.star{position:absolute;width:2px;height:2px;background:white;border-radius:50%;animation:tw 3s infinite ease-in-out}
+@keyframes tw{50%{opacity:.12;transform:scale(.4)}}
+.heart{position:absolute;bottom:-30px;animation:up 9s linear infinite;opacity:0}
+@keyframes up{0%{transform:translateY(0) scale(.7);opacity:0}12%{opacity:.7}90%{opacity:.15}100%{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:30px 18px}
+.hero-inner{max-width:850px}
+.kicker{letter-spacing:5px;text-transform:uppercase;font-size:12px;opacity:.65}
+h1{font-family:'Great Vibes',cursive;font-size:clamp(64px,14vw,130px);font-weight:400;margin:12px 0 0;color:#ffeaf4;text-shadow:0 0 35px #ff76b6}
+.hero p{font-size:21px;opacity:.75;margin:0 0 34px}
+.envelope{width:min(360px,82vw);height:235px;margin:auto;position:relative;cursor:pointer;transition:.5s;filter:drop-shadow(0 25px 35px #0009)}
+.envelope:hover{transform:translateY(-8px)}
+.env{position:absolute;inset:0;border-radius:14px;background:linear-gradient(145deg,#eeb0ca,#934a70);overflow:hidden}
+.env:before,.env:after{content:"";position:absolute;bottom:-5px;width:75%;height:3px;background:#fff4}
+.env:before{left:-13%;transform:rotate(31deg)} .env:after{right:-13%;transform:rotate(-31deg)}
+.flap{position:absolute;top:0;left:0;width:100%;height:64%;background:#d783aa;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:1s;z-index:3}
+.seal{position:absolute;z-index:5;left:50%;top:52%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#fff4f8;color:#a73e6e;font-size:25px;box-shadow:0 6px 20px #0006;transition:.5s}
+.envelope.open .flap{transform:rotateX(180deg)} .envelope.open .seal{opacity:0;transform:translate(-50%,-50%) scale(.3)}
+.tap{margin-top:22px;opacity:.62;font-size:16px}
+#content{display:none;padding:20px 16px 80px} #content.show{display:block;animation:fade 1.2s ease}
+@keyframes fade{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.letter{max-width:800px;margin:0 auto;background:#fff9ef;color:#39252e;border-radius:20px;padding:clamp(25px,6vw,55px);box-shadow:0 30px 80px #0009;position:relative}
+.letter:before{content:"";position:absolute;inset:0;border-radius:20px;opacity:.13;background:repeating-linear-gradient(0deg,transparent 0,transparent 31px,#876e64 32px);pointer-events:none}
+.letter>*{position:relative}
+.greet{font-family:'Great Vibes',cursive;color:#9b4169;font-size:52px;margin:0 0 15px;font-weight:400}
+.letter-text{font-size:clamp(18px,3.8vw,22px);line-height:1.72}
+.sign{font-family:'Great Vibes',cursive;color:#9b4169;font-size:38px;text-align:right;margin-top:28px}
+.mem-title{font-family:'Great Vibes',cursive;text-align:center;font-size:55px;font-weight:400;margin:80px 0 20px;color:#ffeaf4}
+.gallery{max-width:1000px;margin:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.gallery img{width:100%;height:420px;object-fit:cover;border-radius:18px;box-shadow:0 14px 35px #0007;transition:.5s}
+.gallery img:hover{transform:scale(1.025)}
+.gallery img:first-child{grid-column:span 2;height:520px}
+.final{text-align:center;max-width:800px;margin:80px auto 0;padding:55px 20px}
+.final h2{font-family:'Great Vibes',cursive;font-size:clamp(54px,12vw,90px);font-weight:400;margin:0;color:#ffeaf4;text-shadow:0 0 25px #ff76b6}
+.final p{font-size:20px;opacity:.78}
+.love{font-size:28px;margin-top:25px}
+@media(max-width:600px){.gallery{grid-template-columns:1fr}.gallery img:first-child{grid-column:span 1;height:430px}.gallery img{height:330px}}
+</style>
+</head>
+<body>
+<div id="sky"></div><div id="stars"></div><div class="hearts" id="hearts"></div>
+
+<section class="hero">
+<div class="hero-inner">
+<div class="kicker">A little piece of my heart</div>
+<h1>My Dear Pooja</h1>
+<p>Some feelings are too special to be said in a normal message. 🤍</p>
+<div class="envelope" id="env" onclick="openLetter()">
+<div class="env"></div><div class="flap"></div><div class="seal">🤍</div>
+</div>
+<div class="tap" id="tap">Tap the envelope to open my heart ✨</div>
+</div>
+</section>
+
+<section id="content">
+<article class="letter">
+<h2 class="greet">My dear Pooja,</h2>
+<div class="letter-text">My dear Pooja,<br><br>First time nee en kitta friend-ah pesrapo enaku rombo happy-ah irundhuchu. Bcz enaku unna munna irundhey pudikum. Un character, nee pesradhu, sirikuradhu, un kannu… ellame enaku rombo pudikum.<br><br>Nee en friend aana apramum, enaku jealous agum nee un male friends-ta pesrapo la. Apdiye fire agum stomach-la 😏. Naa kaatikka maata… niraya time thaniya sirichuruka unna nenachu.<br><br>Apro unaku enna pudikum-nu therinja andha happiness ennala sollave mudila. Apdi oru happy naan. 🥺<br><br>Unaku la enna pudikuma-nu nenachutu irundha, unna epovum protect pannitey irukanum-thaan thonum enaku. Commit aanadhula irundhu unna en ponna-thaan nenachikittu iruken. 🌍<br><br>Nee illana nejama na sethutha pova nu enaku epovo realise aayiduchu. Unna enna aanalum happy-ah vachupa baby. Epdi ivlo love panna nu enake theriyala.<br><br>Naa unaku sila vishayam nalladhuku-thaan soluva, aana adhu unaku hurt aagudhu. Adhu parava illa… enaku nee en mela paasama irundha podhum. Adha thavira vera edhuvum venda enaku.<br><br>Enna aanalum unna vida maata naan. Indha jenmam unaku naan dhaan-nu nenachaalum, maatha mudiyadhu. 🥺<br><br>Love you sooooo much, thangamey. 🤍<br>Unakaga yaar vena opponent-ah mathipa. 😏<br>Love you sooooo much, thango. 🌍🤍<br><br>— Harishwaran</div>
+<div class="sign">— Harishwaran 🤍</div>
+</article>
+
+<h2 class="mem-title">Our Little Memories</h2>
+<div class="gallery">
+<img src="images/photo1.jpg" alt="Memory 1" loading="lazy"><img src="images/photo2.jpg" alt="Memory 2" loading="lazy"><img src="images/photo3.jpg" alt="Memory 3" loading="lazy"><img src="images/photo4.jpg" alt="Memory 4" loading="lazy"><img src="images/photo5.jpg" alt="Memory 5" loading="lazy"><img src="images/photo6.jpg" alt="Memory 6" loading="lazy"><img src="images/photo7.jpg" alt="Memory 7" loading="lazy"><img src="images/photo8.jpg" alt="Memory 8" loading="lazy"><img src="images/photo9.jpg" alt="Memory 9" loading="lazy">
+</div>
+
+<div class="final">
+<h2>Love you sooooo much,<br>Thangamey 🤍</h2>
+<p>No matter what happens, I’ll always choose you.</p>
+<div class="love">🌍🤍🥺😏</div>
+</div>
+</section>
+
+<script>
+const stars=document.getElementById('stars');
+for(let i=0;i<90;i++){let s=document.createElement('i');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*3+'s';stars.appendChild(s)}
+const hearts=document.getElementById('hearts');
+for(let i=0;i<22;i++){let h=document.createElement('span');h.className='heart';h.textContent=['🤍','♡','✨','💕'][Math.floor(Math.random()*4)];h.style.left=Math.random()*100+'%';h.style.animationDelay=Math.random()*9+'s';h.style.fontSize=(12+Math.random()*18)+'px';hearts.appendChild(h)}
+function openLetter(){
+ document.getElementById('env').classList.add('open');
+ document.getElementById('tap').textContent='For you, Pooja 🤍';
+ setTimeout(()=>document.getElementById('content').classList.add('show'),900);
+ setTimeout(()=>document.getElementById('content').scrollIntoView({behavior:'smooth'}),1100);
+}
+</script>
+</body>
+</html>
